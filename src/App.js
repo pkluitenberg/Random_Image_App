@@ -11,11 +11,13 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={currentImage} className="App-image"/>
-      </header>
-    </div>
+    <html>    
+      <div className="App">
+        <header className="App-header">
+          <img src={currentImage} className="App-image"/>
+        </header>
+      </div>
+    </html>
   );
 }
 
