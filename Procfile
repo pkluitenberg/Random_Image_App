@@ -1,2 +1,2 @@
 web: gunicorn app:app
-web: node /src/App.js
+web: node src/App.js
