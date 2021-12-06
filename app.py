@@ -1,7 +1,11 @@
 import requests
-from flask import Flask
+from flask import Flask, send_from_directory
 
-app = Flask(__name__, static_folder='build', static_url_path='/')
+app = Flask(__name__, static_folder='./build', static_url_path='')
+
+@app.route('/')
+def index():
+    return send_from_directory(app.static_folder,'index.html')
 
 # returns url of random Unsplash image when endpoint is hit
 @app.route('/image')
